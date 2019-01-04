@@ -17,7 +17,7 @@ source:
     - python3.patch  # [py>=30]
 
 build:
-  number: 0
+  number: 1000
   skip: true  # [win]
 
 requirements:
