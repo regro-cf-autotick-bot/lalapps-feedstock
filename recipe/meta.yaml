@@ -1,6 +1,6 @@
 {% set name = "lalapps" %}
-{% set version = "6.22.0" %}
-{% set sha256 = "606430004b0df55c01cbad9321163ec93eb74d99f729a5409c333e4f5d3c46a8" %}
+{% set version = "6.23.0" %}
+{% set sha256 = "e2c749ad3f326ef212f25f8f06d7a85a87903efeaf1f13163da40e27bde9f16e" %}
 
 package:
   name: {{ name }}
@@ -17,7 +17,7 @@ source:
     - python3.patch  # [py>=30]
 
 build:
-  number: 1000
+  number: 0
   skip: true  # [win]
 
 requirements:
