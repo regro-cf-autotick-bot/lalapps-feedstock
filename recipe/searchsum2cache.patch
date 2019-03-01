@@ -1,0 +1,13 @@
+diff --git a/src/lalapps/lalapps_searchsum2cache.py b/src/lalapps/lalapps_searchsum2cache.py
+index 71557c36c9..a727cabaca 100644
+--- a/src/lalapps/lalapps_searchsum2cache.py
++++ b/src/lalapps/lalapps_searchsum2cache.py
+@@ -42,7 +42,7 @@ import sys
+ from lal.utils import CacheEntry
+ from ligo.lw import ligolw
+ from ligo.lw import lsctables
+-from ligo.lw import utils as ligolw_utils as ligolw_utils
++from ligo.lw import utils as ligolw_utils
+ #from lalapps import git_version
+
+
