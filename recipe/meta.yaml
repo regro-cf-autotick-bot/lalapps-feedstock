@@ -1,6 +1,6 @@
 {% set name = "lalapps" %}
-{% set version = "6.23.0" %}
-{% set sha256 = "e2c749ad3f326ef212f25f8f06d7a85a87903efeaf1f13163da40e27bde9f16e" %}
+{% set version = "6.24.0" %}
+{% set sha256 = "6db6c4368d548eeb3adb486dd4c6ec7bf4aeae33b7094fbee2cbbf1e2bc8db22" %}
 
 {% set lal_version = "6.19.2" %}
 {% set lalburst_version = "1.5.1" %}
@@ -26,7 +26,7 @@ source:
     - searchsum2cache.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
