@@ -1,15 +1,15 @@
 {% set name = "lalapps" %}
-{% set version = "6.23.0" %}
-{% set sha256 = "e2c749ad3f326ef212f25f8f06d7a85a87903efeaf1f13163da40e27bde9f16e" %}
+{% set version = "6.24.0" %}
+{% set sha256 = "6db6c4368d548eeb3adb486dd4c6ec7bf4aeae33b7094fbee2cbbf1e2bc8db22" %}
 
-{% set lal_version = "6.19.2" %}
+{% set lal_version = "6.20.0" %}
 {% set lalburst_version = "1.5.1" %}
 {% set lalframe_version = "1.4.0" %}
-{% set lalinference_version = "1.10.2" %}
-{% set lalinspiral_version = "1.8.1" %}
+{% set lalinference_version = "1.11.0" %}
+{% set lalinspiral_version = "1.9.0" %}
 {% set lalmetaio_version = "1.5.0" %}
-{% set lalpulsar_version = "1.17.1" %}
-{% set lalsimulation_version = "1.8.2" %}
+{% set lalpulsar_version = "1.18.0" %}
+{% set lalsimulation_version = "1.9.0" %}
 
 package:
   name: {{ name }}
@@ -22,11 +22,9 @@ source:
   patches:
     # weave tests are fragile and hardware dependent
     - disable-weave-tests.patch
-    # fix typo in lalapps_searchsum2cache
-    - searchsum2cache.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -47,7 +45,9 @@ requirements:
     - lalpulsar >={{ lalpulsar_version }}
     - lalsimulation >={{ lalsimulation_version }}
     - libframe
+    - llvm-openmp  # [osx]
     - metaio
+    - openmp  # [linux]
     - openmpi
     - python
     - python-lal >={{ lal_version }}
@@ -74,7 +74,9 @@ requirements:
     - lalinference >={{ lalinference_version }}
     - libframe
     - ligo-segments
+    - llvm-openmp  # [osx]
     - metaio
+    - openmp  # [linux]
     - openmpi
     - numpy
     - pillow
