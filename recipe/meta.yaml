@@ -24,7 +24,7 @@ source:
     - disable-weave-tests.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -44,6 +44,7 @@ requirements:
     - lalmetaio >={{ lalmetaio_version }}
     - lalpulsar >={{ lalpulsar_version }}
     - lalsimulation >={{ lalsimulation_version }}
+    - libblas * *netlib
     - libframe
     - llvm-openmp  # [osx]
     - metaio
