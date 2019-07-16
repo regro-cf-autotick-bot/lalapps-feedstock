@@ -24,7 +24,7 @@ source:
     - disable-weave-tests.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   ignore_run_exports:
     # run_exports parsing for fftw is broken, so we ignore it
