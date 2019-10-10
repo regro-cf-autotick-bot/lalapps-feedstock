@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '4'
+- '9'
 cfitsio:
 - '3.470'
 channel_sources:
@@ -12,12 +12,12 @@ channel_targets:
 - conda-forge main
 gsl:
 - '2.5'
-libblas:
-- 3.8 *netlib
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
 - '10.9'
+openmpi:
+- '4.0'
 pin_run_as_build:
   python:
     min_pin: x.x
