@@ -1,6 +1,6 @@
 {% set name = "lalapps" %}
-{% set version = "6.24.0" %}
-{% set sha256 = "6db6c4368d548eeb3adb486dd4c6ec7bf4aeae33b7094fbee2cbbf1e2bc8db22" %}
+{% set version = "6.25.0" %}
+{% set sha256 = "75aa9f3000cb382b791c82b45f08d24c8d24bb1394fff73d81e7f08d1b08589e" %}
 
 {% set lal_version = "6.20.0" %}
 {% set lalburst_version = "1.5.1" %}
@@ -30,7 +30,7 @@ build:
     # run_exports parsing for fftw is broken, so we ignore it
     # manually, for now
     - fftw
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
